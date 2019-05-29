@@ -29,7 +29,7 @@ class Navbar extends Component {
 
             <nav>
                 <div className="app_name_logout_container">
-                    <span className="app_name_container">PANTRIFY</span>
+                    <span className="app_name_container">Test This</span>
                     
                     {username && <div>Welcome, {username}  <button className="logout_button" onClick={() => {
                         this.props.logout()

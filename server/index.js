@@ -30,10 +30,14 @@ massive(CONNECTION_STRING).then((database) => {
   })
 })
 
+function messageMe (req, res, next) {
+  console.log('good job')
+  next()
+}
 
 
 
-app.post('/auth/login', Auth_ctrl.login)
+app.post('/auth/login', messageMe,  Auth_ctrl.login)
 app.post('/auth/register', Auth_ctrl.register)
 app.get('/auth/logout', Auth_ctrl.logout)
 app.get('/auth/users', Auth_ctrl.getUsers)

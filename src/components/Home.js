@@ -30,7 +30,7 @@ class Home extends Component {
         {this.props.username ? (
           <div>
             <h2 className="header_title">
-              My Recipes
+              You are special, look at this css supah styling...
             </h2>
             
             
@@ -38,7 +38,7 @@ class Home extends Component {
         ) : (
           <>
             <div className='toggleSlider'>
-              
+              YOU HAVE YET TO LOG IN... PLEASE DO SO.
             </div>
             
           </>
