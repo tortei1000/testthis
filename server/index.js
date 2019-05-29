@@ -3,7 +3,7 @@ require('dotenv').config()
 const app = express()
 const massive = require('massive')
 const session = require('express-session')
-const Auth_ctrl = require('./controllers/Auth_ctrl')
+const Auth_ctrl = require('./Auth_ctrl')
 
 
 

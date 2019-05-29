@@ -26,14 +26,14 @@ class NewUser extends Component {
 
   handleNewUserFormSubmit = async (e) => {
     e.preventDefault()
-    const { username, password, phone } = this.state
+    const { username, password} = this.state
     try {
-      const res = await axios.post('/auth/register', { username, password, phone })
+      const res = await axios.post('/auth/register', { username, password})
       this.props.updateUsername(username)
       this.props.updateUserId(res.data.user_id)
       this.props.history.push('/home')
     } catch (err) {
-      this.setState({ username: '', password: '', phone: "", loginError: true })
+      this.setState({ username: '', password: '', loginError: true })
     }
   }
 
