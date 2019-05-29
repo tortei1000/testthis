@@ -5,7 +5,7 @@ const TopicDetail = ({match}) => {
   console.log(match)
   return (
     <>
-    <h2>{match.params.topicId}</h2>
+    <h2>{match.params.topicsId}</h2>
     <ul>
       <li>
         <Link to='/Topics'>Back</Link>

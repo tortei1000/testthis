@@ -8,10 +8,10 @@ const Topics = ({match}) => {
       <h2>My Topics</h2>
       <ul>
         <li>
-          <Link to={`/Topics/${match.topicId}`}>Topic 1</Link>
+          <Link to={`/Topics/topic1`}>Topic 1</Link>
         </li>
         <li>
-          <Link to={`/Topics/${match.topicId}`}>Topic 2</Link>
+          <Link to={`/Topics/topic2`}>Topic 2</Link>
         </li>
       </ul>
     </>
