@@ -31,7 +31,7 @@ class NewUser extends Component {
       const res = await axios.post('/auth/register', { username, password})
       this.props.updateUsername(username)
       this.props.updateUserId(res.data.user_id)
-      this.props.history.push('/home')
+      this.props.history.push('/')
     } catch (err) {
       this.setState({ username: '', password: '', loginError: true })
     }

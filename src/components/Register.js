@@ -33,7 +33,7 @@ class Register extends Component {
             this.props.updateUsername(loginUsername)
             this.props.updateUserId(res.data.id)
 
-            this.props.history.push('/home')
+            this.props.history.push('/')
         } catch (err) {
             this.setState({ loginUsername: '', loginPassword: '', loginError: true })
         }

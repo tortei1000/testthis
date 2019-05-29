@@ -4,6 +4,8 @@ import Register from './components/Register'
 import Home from './components/Home'
 import Login from './components/Login'
 import NewUser from './components/NewUser';
+import TopicDetail from './components/TopicDetail'
+import Topics from './components/Topics'
 
 
 export default (
@@ -15,8 +17,8 @@ export default (
       </Login>
     )} />
     <Route path='/register' component={NewUser} />
-    <Route path='/home' component={Home} />
-   
+    <Route path='/Topics/:topicsId' component={TopicDetail} />
+    <Route path='/Topics' component={Topics} />
 
   </Switch>
 )
