@@ -69,7 +69,20 @@ module.exports = {
     } else {
       res.sendStatus(500)
     }
-  }
+  },
+
+  updateUser: (req, res) => {
+
+    const db = req.app.get('db')
+    const { id } = req.session.user;
+    const { username } = req.body
+
+    db.update_user([username, id]).then(() => {
+      res.sendStatus(200)
+       
+    })
+    
+  },
 }
-  
+
 

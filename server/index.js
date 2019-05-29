@@ -31,6 +31,7 @@ massive(CONNECTION_STRING).then((database) => {
 })
 
 function messageMe (req, res, next) {
+  
   console.log('good job')
   next()
 }
@@ -42,4 +43,5 @@ app.post('/auth/register', Auth_ctrl.register)
 app.get('/auth/logout', Auth_ctrl.logout)
 app.get('/auth/users', Auth_ctrl.getUsers)
 app.get('/auth/users/:title', Auth_ctrl.allUsers)
+app.put('/auth/users/:id', Auth_ctrl.updateUser)
 
