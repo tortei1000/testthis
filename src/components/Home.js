@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import axios from 'axios';
@@ -39,7 +39,7 @@ class Home extends Component {
 
   render() {
     
-    console.log(this.state.users)
+    console.log(this.props)
 
     return (
       <div>
@@ -50,7 +50,7 @@ class Home extends Component {
             </h2>
               <Search search={this.search}/>
               {this.state.users.id}
-              {/* <Topics /> */}
+              <Link to='/Topics'>Topics</Link>
             
             
           </div>
