@@ -1,3 +1,4 @@
-update users
-set username = $1,
-where id = $2
+UPDATE users
+SET username = $1
+WHERE
+   users.id = $2

@@ -15,6 +15,7 @@ class Home extends Component {
     super()
     this.state = {
       users: {id:""},
+      newName: ""
       
     }
   }
@@ -24,6 +25,19 @@ class Home extends Component {
     }).catch((err) => { console.log(err) })
   }
 
+  handleChange = (e) => {
+    let { value, name } = e.target
+    this.setState({
+      [name]: value
+    })
+  }
+
+  editUser = () => {
+    const { newName } = this.state
+    axios.put(`/auth/users/${this.props.match.params.id}`, { newName }).then(() => {
+      
+    })
+  }
 
   search = (text) => {
     console.log(text)
@@ -48,6 +62,8 @@ class Home extends Component {
             <h2 className="header_title">
               You are special, look at this css supah styling...
             </h2>
+              <input name="newName" type="text" placeholder="new user name" onChange={this.handleChange}/>
+              <button onClick={this.editUser}>submit</button>
               <Search search={this.search}/>
               {this.state.users.id}
               <Link to='/Topics'>Topics</Link>
